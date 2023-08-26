@@ -15,7 +15,7 @@ This returns the balance of user
 | `data` | `string` | **Required**. Username of user |
 #### Example Response
 ```json
-{"type":"dataResponse","data":200}
+{"type":"dataResponse","data":3454}
 ```
 ### Submit mined block
 
