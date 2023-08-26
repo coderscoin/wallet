@@ -1,1 +1,33 @@
 # wallet
+
+## Peer network reference
+
+### Get the balance of a user
+
+```https
+  METHOD getBalance
+```
+This returns the latest block on the chain in JSON format.
+#### Example Response
+```json
+{"index":12,"transactions":[{"fromAddress":"user1","toAddress":"user2","amount":10}],"timestamp":1688201520,"previousHash":"00329e3f7babcfc4dece5d7e2052b7eadf901b208e305d31f971145a85a5fe2c","nonce":270}
+```
+### Submit mined block
+
+```https
+  POST /mine/
+```
+#### Request
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `latesthash` | `string` | **Required**. The computed hash of the latest block |
+| `proof` | `string` | **Required**. The proof returned from the PoW algorithm |
+| `newblock` | `list` | **Required**. The newly mined block's details |
+| `miner` | `string` | **Required**. The username of the miner |
+
+#### Response
+| Code | Description                       |
+| :-------- | :-------------------------------- |
+| `200` | The mining is successful and has been accepted by the network. |
+| `403` | The user was banned from the platform due to fraud detected or the last block was not validated |
+| `500` | Mining failed, the network rejected the request because it is incorrect. |
