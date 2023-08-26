@@ -8,6 +8,11 @@
 METHOD getBalance
 ```
 This returns the balance of user
+#### Request
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `type` | `string` | **Required**. Method name |
+| `data` | `string` | **Required**. Username of user |
 #### Example Response
 ```json
 {"type":"dataResponse","data":200}
