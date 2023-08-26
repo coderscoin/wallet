@@ -5,12 +5,12 @@
 ### Get the balance of a user
 
 ```https
-  METHOD getBalance
+METHOD getBalance
 ```
-This returns the latest block on the chain in JSON format.
+This returns the balance of user
 #### Example Response
 ```json
-{"index":12,"transactions":[{"fromAddress":"user1","toAddress":"user2","amount":10}],"timestamp":1688201520,"previousHash":"00329e3f7babcfc4dece5d7e2052b7eadf901b208e305d31f971145a85a5fe2c","nonce":270}
+{"type":"dataResponse","data":200}
 ```
 ### Submit mined block
 
