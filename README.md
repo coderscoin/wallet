@@ -26,7 +26,21 @@ This returns the balance of user
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `type` | `string` | **Required**. Method name |
-| `data` | `string` | **Required**. Username of user |
+| `transaction` | **Required**. Transaction object with TSK |
+| `data` | `string` | **Required**. Data of apps |
+#### Example Request
+```json
+{
+        	"type": "newTransaction",
+	        "transaction": {
+	            "from": "johndoe",
+	            "to": "petertill",
+	            "amount": 2,
+	            "tsk": "hfdsuhiufhszgwez43423iigvsizibsvdbisfd&@yxcxcrffds"
+	        },
+	        data: [{"product": 3421}]
+    	}
+```
 #### Example Response
 ```json
 {"type":"dataResponse","data":3454}
