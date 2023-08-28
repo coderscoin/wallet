@@ -31,15 +31,15 @@ This returns the balance of user
 #### Example Request
 ```json
 {
-        	"type": "newTransaction",
-	        "transaction": {
-	            "from": "johndoe",
-	            "to": "petertill",
-	            "amount": 2,
-	            "tsk": "hfdsuhiufhszgwez43423iigvsizibsvdbisfd&@yxcxcrffds"
-	        },
-	        data: [{"product": 3421}]
-    	}
+"type": "newTransaction",
+"transaction": {
+	"from": "johndoe",
+	"to": "petertill",
+	"amount": 2,
+	"tsk": "hfdsuhiufhszgwez43423iigvsizibsvdbisfd&@yxcxcrffds"
+},
+"data": [{"product": 3421}]
+}
 ```
 #### Example Response
 ```json
